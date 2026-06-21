@@ -1,0 +1,446 @@
+:root{
+--guinda:#611232;
+--guinda2:#8a1538;
+--gris:#f4f6f9;
+--blanco:#ffffff;
+--texto:#333333;
+--sombra:0 5px 20px rgba(0,0,0,.08);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--gris);
+font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+color:var(--texto);
+overflow-x:hidden;
+}
+
+/* ======================================
+BOTON MENU
+====================================== */
+
+.menu-btn{
+position:fixed;
+top:15px;
+right:15px;
+width:45px;
+height:45px;
+border:none;
+border-radius:12px;
+background:var(--guinda);
+color:white;
+font-size:20px;
+cursor:pointer;
+z-index:99999;
+box-shadow:0 4px 15px rgba(0,0,0,.25);
+transition:.3s;
+}
+
+.menu-btn:hover{
+background:var(--guinda2);
+transform:scale(1.05);
+}
+
+/* ======================================
+FONDO MENU
+====================================== */
+
+#fondo{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.45);
+display:none;
+z-index:99997;
+}
+
+#fondo.activo{
+display:block;
+}
+
+/* ======================================
+SIDEBAR
+====================================== */
+
+.sidebar{
+position:fixed;
+top:0;
+right:-280px;
+width:260px;
+height:100vh;
+background:var(--guinda);
+padding:70px 20px;
+transition:.35s;
+z-index:99998;
+box-shadow:-5px 0 15px rgba(0,0,0,.2);
+}
+
+.sidebar.activo{
+right:0;
+}
+
+.sidebar h2{
+color:white;
+text-align:center;
+margin-bottom:30px;
+font-weight:700;
+}
+
+.sidebar a{
+display:block;
+padding:14px;
+margin-bottom:12px;
+border-radius:12px;
+background:rgba(255,255,255,.15);
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.sidebar a:hover{
+background:white;
+color:var(--guinda);
+transform:translateX(-5px);
+}
+
+.sidebar i{
+margin-right:10px;
+}
+
+/* ======================================
+CONTENEDOR
+====================================== */
+
+.contenedor{
+padding:30px;
+padding-top:80px;
+}
+
+/* ======================================
+BANNER PRINCIPAL
+====================================== */
+
+.banner{
+background:linear-gradient(
+135deg,
+var(--guinda),
+var(--guinda2)
+);
+color:white;
+border-radius:20px;
+padding:35px;
+margin-bottom:25px;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.banner h1{
+font-size:32px;
+font-weight:700;
+}
+
+.banner p{
+margin-top:10px;
+opacity:.95;
+font-size:15px;
+}
+
+/* ======================================
+KPI CARDS
+====================================== */
+
+.kpi{
+background:white;
+border-radius:20px;
+padding:25px;
+text-align:center;
+box-shadow:var(--sombra);
+transition:.3s;
+height:100%;
+}
+
+.kpi:hover{
+transform:translateY(-6px);
+}
+
+.kpi .icono{
+font-size:32px;
+color:var(--guinda);
+}
+
+.kpi h5{
+margin-top:15px;
+color:#666;
+font-size:16px;
+}
+
+.kpi h2{
+margin-top:10px;
+color:var(--guinda);
+font-size:32px;
+font-weight:700;
+}
+
+/* ======================================
+ALERTAS
+====================================== */
+
+.alerta-box{
+background:white;
+border-radius:20px;
+padding:25px;
+box-shadow:var(--sombra);
+height:100%;
+}
+
+.alerta-box h4{
+color:var(--guinda);
+margin-bottom:20px;
+}
+
+.alert{
+border:none;
+border-radius:12px;
+}
+
+/* ======================================
+PANEL EJECUTIVO
+====================================== */
+
+.ejecutivo{
+background:white;
+border-radius:20px;
+padding:25px;
+box-shadow:var(--sombra);
+height:100%;
+}
+
+.ejecutivo h4{
+color:var(--guinda);
+margin-bottom:20px;
+}
+
+.indicador{
+padding:15px;
+background:#f8f9fa;
+border-radius:12px;
+margin-bottom:12px;
+transition:.3s;
+}
+
+.indicador:hover
+
+/* ======================================
+TARJETAS DE GRAFICAS
+====================================== */
+
+.card{
+border:none !important;
+border-radius:20px !important;
+box-shadow:var(--sombra);
+}
+
+.card-body{
+padding:25px;
+}
+
+.card h5{
+color:var(--guinda);
+font-weight:600;
+}
+
+/* ======================================
+GRAFICAS
+====================================== */
+
+canvas{
+width:100% !important;
+max-width:100%;
+}
+
+/* ======================================
+HALLAZGOS AUTOMATICOS
+====================================== */
+
+.list-group-item{
+border:none;
+margin-bottom:8px;
+border-radius:12px !important;
+background:#f8f9fa;
+}
+
+/* ======================================
+BADGES
+====================================== */
+
+.badge{
+padding:8px 12px;
+font-size:13px;
+}
+
+/* ======================================
+FOOTER
+====================================== */
+
+.footer{
+text-align:center;
+margin-top:40px;
+padding:25px;
+color:#777;
+}
+
+.footer hr{
+margin-bottom:20px;
+}
+
+/* ======================================
+TABLAS
+====================================== */
+
+.table{
+background:white;
+border-radius:15px;
+overflow:hidden;
+}
+
+.table thead{
+background:var(--guinda);
+color:white;
+}
+
+.table th{
+border:none;
+}
+
+.table td{
+vertical-align:middle;
+}
+
+/* ======================================
+FORMULARIOS
+====================================== */
+
+.form-control,
+.form-select{
+border-radius:12px;
+padding:10px;
+}
+
+.form-control:focus,
+.form-select:focus{
+box-shadow:none;
+border-color:var(--guinda);
+}
+
+/* ======================================
+BOTONES
+====================================== */
+
+.btn-guinda{
+background:var(--guinda);
+color:white;
+border:none;
+border-radius:12px;
+padding:10px 20px;
+}
+
+.btn-guinda:hover{
+background:var(--guinda2);
+color:white;
+}
+
+/* ======================================
+SCROLLBAR
+====================================== */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#e6e6e6;
+}
+
+::-webkit-scrollbar-thumb{
+background:var(--guinda);
+border-radius:10px;
+}
+
+/* ======================================
+RESPONSIVE TABLET
+====================================== */
+
+@media(max-width:992px){
+
+.banner h1{
+    font-size:28px;
+}
+
+.kpi h2{
+    font-size:28px;
+}
+
+}
+
+/* ======================================
+RESPONSIVE MOVIL
+====================================== */
+
+@media(max-width:768px){
+
+.contenedor{
+    padding:15px;
+    padding-top:75px;
+}
+
+.banner{
+    text-align:center;
+    padding:25px;
+}
+
+.banner h1{
+    font-size:22px;
+}
+
+.sidebar{
+    width:240px;
+}
+
+.kpi{
+    padding:20px;
+}
+
+}
+
+/* ======================================
+ANIMACIONES
+====================================== */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(15px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.banner,
+.kpi,
+.alerta-box,
+.ejecutivo,
+.card{
+animation:fadeIn .5s ease;
+}
